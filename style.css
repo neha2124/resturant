@@ -1,0 +1,218 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'PT Serif', serif;
+}
+.m1{
+    margin: 40px 80px;
+}
+.head{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(57, 55, 55);
+    align-items: center;
+    padding: 12px;
+    /* align-items: center; */
+
+}
+
+.logo{
+    color: antiquewhite;
+    font-family: 'Playfair Display', serif;
+}
+
+
+.menu{
+    /* align-self: flex-end; */
+    color: sandybrown;
+    text-transform: capitalize;
+    padding: 15px;
+    font-size: 20px;
+}
+.order{
+    border: none;
+    padding: 2px 8px;
+    text-transform: capitalize;
+    background-color: antiquewhite;
+    font-size: 18px;
+    border-radius:15px;
+    margin: 12px;
+    cursor: pointer;
+}
+.cards{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card{
+    border:2px solid rgb(27, 26, 26);
+    border-radius: 14px;
+    /* box-shadow:20px 20px 24px rgba(0, 0, 0, 0.6);  */
+    width: 300px;
+    height: 320px;
+    text-align: center;
+    /* padding: 25px 15px; */
+    margin:15px 14px;
+    overflow-y: hidden;
+    position: relative;
+    transition: 0.5s ease-in-out;
+}
+.card-img{
+    width: 295px;
+    height: 200px;
+    /* padding: auto; */
+} 
+
+.card-body img{
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover; */
+}
+.card-text{
+    /* width: 200px; */
+    /* font-size: 1.2em; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+    font-weight: 600;
+    padding-left: 25px;
+    text-transform: capitalize;
+    
+}
+.card-text span{
+    display: block;
+    align-self: center;
+    font-family: 'Playfair Display', serif ;
+    font-size: 18px;
+}
+.food-order ,#pay , #payed{
+    border: none;
+    padding: 2px 8px;
+    text-transform: capitalize;
+    background-color:  rgb(56, 8, 17);
+    font-size: 18px;
+    border-radius:15px;
+    margin: 12px;
+    cursor: pointer;
+    color: antiquewhite;
+
+}
+#customers td, #customers th {
+    border: 1px solid #ddd;
+    /* border-spacing: 0cqmax0; */
+    padding: 8px;
+    text-align: center;
+  }
+  
+  /* #customers tr:nth-child(even){background-color: #f2f2f2;} */
+  
+  /* #customers tr:hover {background-color: #ddd;} */
+  
+  #customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #db4268;
+    color: white;
+  }
+  .your-order{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background-color: rgb(238, 85, 116);
+    color: antiquewhite;
+    height: 60%;
+    width: 70%;
+    border-radius: 1rem;
+    transform: translate(-50% , -50%);
+    padding: 2rem 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  .your-order h1{
+    text-align: center;
+    font-family:'Playfair Display', serif; ;
+  }
+  .your-order button{
+    /* align-items: center; */
+    margin: auto;
+    /* font-family: serif; ; */
+  }
+  .img{
+    width: 50px;
+}
+.img img{
+    height: 45px;
+    width: 45px;
+    border-radius: 50px;
+    /* display: block; */
+}
+.order-close-btn{
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    font-size: 2rem;
+    background: transparent;
+    border:none;
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.9;
+
+}
+.payment span{
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 2.3px;
+}
+.loading-container{
+    display: flex;
+    /* flex-direction: row; */
+    padding: 10px;
+} 
+.loading{
+    background-color: aliceblue;
+    height: 7px;
+    margin: 4px;
+    width: 5px;
+    border-radius: 10px;
+    align-self: flex-end;
+    animation: loading 1s ease-in-out  infinite alternate;
+
+
+}
+.loading-2{
+    animation: loading 1s ease-in-out 0.5s infinite ;
+}
+.loading-3{
+     content: ""; 
+     animation: loading 1s ease-in-out 0.7s infinite ;
+}  
+.hide{
+    display:none;
+}
+@keyframes loading {
+    from{
+        background-color: aqua;
+    }to{
+        background-color: antiquewhite;
+    }
+}
+
+@media (max-width :750px ){
+    .m1{
+        margin: 0;
+    }
+    .navbar {
+        font-size: 16px;
+    }
+    }
