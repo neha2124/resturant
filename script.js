@@ -8,10 +8,11 @@ const payment = document.querySelector(".payment")
 const demo = document.querySelector(".list")
 const orderPrepartion = document.querySelector(".order-prep")
 const thanks = document.querySelector("#thank")
-const close = document.querySelector(".order-close-btn")
+const Close = document.querySelector(".order-close-btn")
 //this function fetch food menu and call display and order function
 async function getMenu (){
-  try{ const url ="https://free-food-menus-api-production.up.railway.app/burgers"
+  try{ 
+    const url ="https://free-food-menus-api-production.up.railway.app/burgers"
    const response = await fetch(url)
    const data = await response.json()
    const menu = data;
@@ -52,7 +53,7 @@ function display (data) {
 }
 
 let Order = {orderStaus:false , paymentStatus : false}
-// this function randomly take order and return orderStatus 
+// this function randomly take order and return orderStatus and click place order btn to invoke this function
 function takeOrder (data){
    
    let obj = []
@@ -96,12 +97,12 @@ function takeOrder (data){
               res(table.innerHTML= Html)
                     Order.orderStaus = true;
                     // console.log(Order)
-            }, 2000);
+            }, 2500);
           
     })
     
 } 
-//this function return payment Status and alert
+//this function return payment Status 
 function payOrder (){
     return new Promise((resolve) => {
         setTimeout(() => {
@@ -124,7 +125,7 @@ function payOrder (){
    }
   
 
- 
+ // this function show order prepring display
    function orderPrepDisplay(){
     let html = ` <div class="loading-container">
     <h2>Order  preparing</h2>
@@ -162,12 +163,13 @@ function thankyou (){
         // orderPrepartion.innerHTML = "th"
         thanks.classList.remove("hide")
         
-        },3000)
+        },1500)
+        
+
 }
 const payed = document.querySelector("#payed")
 payed.addEventListener("click",()=>orderPrep())
-console.log(payed)
-// takeOrder(card)
+
 placeOrder.addEventListener("click",()=>{
     order.classList.remove("hide")
 })
@@ -177,7 +179,7 @@ pay.addEventListener("click",()=>{
     payment.classList.remove("hide")
    
 })
-close.addEventListener("click" ,()=>{
+Close.addEventListener("click" ,()=>{
     order.classList.add("hide")
     location.reload()
 } )
