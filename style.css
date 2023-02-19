@@ -8,6 +8,7 @@ h1{
     text-align: center;
     /* font-family: 'Playfair Display', serif; */
 }
+/* header section */
 .head{
     display: flex;
     justify-content: space-between;
@@ -15,9 +16,7 @@ h1{
     /* opacity: 0.8; */
     align-items: center;
     padding: 10px;
-    position: fixed;
-    width: 100%;
-    z-index: 100;
+   
 
     /* align-items: center; */
 
@@ -46,6 +45,7 @@ h1{
     margin: 12px;
     cursor: pointer;
 }
+/* card section */
 .cards{
     display: flex;
     justify-content: space-around;
@@ -66,17 +66,17 @@ h1{
     position: relative;
     transition: 0.5s ease-in-out;
 }
-.card-img{
-    width: 295px;
-    height: 200px;
+ .card-img{
+    /* width: 290px; */
+    height: 180px;
     /* padding: auto; */
-} 
+}
 
-.card-body img{
+.card-img img{
     width: 100%;
     height: 100%;
     /* object-fit: cover; */
-}
+ } 
 .card-text{
     /* width: 200px; */
     /* font-size: 1.2em; */
@@ -95,6 +95,7 @@ h1{
     font-family: 'Playfair Display', serif ;
     font-size: 18px;
 }
+
 .food-order ,#pay , #payed{
     border: none;
     padding: 2px 8px;
@@ -107,25 +108,8 @@ h1{
     color: antiquewhite;
 
 }
-#customers td, #customers th {
-    border: 1px solid #ddd;
-    /* border-spacing: 0cqmax0; */
-    padding: 8px;
-    text-align: center;
-  }
-  
-  /* #customers tr:nth-child(even){background-color: #f2f2f2;} */
-  
-  /* #customers tr:hover {background-color: #ddd;} */
-  
-  #customers th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: center;
-    background-color: #db4268;
-    color: white;
-  }
-  .your-order{
+/* order-section */
+.your-order{
     
     position: fixed;
     top: 50%;
@@ -136,21 +120,38 @@ h1{
     border-radius: 1rem;
     transform: translate(-50% , -50%);
     padding: 2rem 5rem;
-    overflow-y: scroll;
-    overflow-x: hidden;
-  }
+}
   .your-order h1{
     text-align: center;
-    font-family:'Playfair Display', serif; ;
+    font-family:'Playfair Display', serif; 
+    margin: 10px;
   }
-  .your-order button{
-    /* align-items: center; */
-    margin: auto;
-    /* font-family: serif; ; */
+  .list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: space-between; */
   }
-  .img{
-    width: 50px;
-}
+#customers td, #customers th {
+    border: 1px solid #ddd;
+    /* border-spacing: 0cqmax0; */
+    padding: 8px;
+    text-align: center;
+  }
+  
+  
+  
+  #customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #db4268;
+    color: white;
+  }
+  
+ 
+ 
+  
 .img img{
     height: 45px;
     width: 45px;
@@ -171,11 +172,8 @@ h1{
     opacity: 0.9;
 
 }
-.payment span{
-    font-size: 1.2rem;
-    font-weight: 600;
-    letter-spacing: 2.3px;
-}
+
+/* order-loading section */
 .loading-container{
     display: flex;
     /* flex-direction: row; */
@@ -211,10 +209,11 @@ h1{
 }
 
 @media (max-width :750px ){
-    .m1{
-        margin: 0;
-    }
-    .navbar {
+    
+    .logo, .menu, .order {
         font-size: 16px;
+    }
+    .menu{
+        padding: 0;
     }
     }
