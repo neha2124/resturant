@@ -179,6 +179,7 @@ pay.addEventListener("click",()=>{
 })
 close.addEventListener("click" ,()=>{
     order.classList.add("hide")
+    location.reload()
 } )
 getMenu()
 
