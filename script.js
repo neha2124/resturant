@@ -117,7 +117,7 @@ function payOrder (){
     })
   }
 
-// this function hide display
+// this function check payment status and hide payment display
    function payDisplay(){
     if(payOrder){
     payment.classList.add("hide")
